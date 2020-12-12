@@ -1,60 +1,60 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
-    return `# Cool Project
+
+
+  let markDown =
+
+    `# ${answers.title}
+
     ![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
     
     ## Description
-    
-    easy to use, will make you money, and runs well
-    
-    ## Table of Contents 
-    
-    * [Installation](#installation)
-    
-    * [Usage](#usage)
-    
-    * [License](#license)
-    
-    * [Contributing](#contributing)
-    
-    * [Tests](#tests)
-    
+    ${answers.description}
+
+    ## Table of Contents     
+      `
+  if (answers.installation !== "none") {
+    markDown += `
+      * [Installation](#installation)
+      To install necessary dependencies, run the following command:`
+
+      \`\`\`
+      ${answers.installation}
+      \`\`\`
+    `
+  };
+
+  if (answers.usage !== "none") {
+    markDown += `
+      * [Usage](#usage)
+      ${answers.usage}
+    `
+  };
+
+  if (answers.usage !== "none") {
+    markDown += `
+      * [Contributing](#contributing)
+      ${answers.contribute}
+      `
+  };
+
+  if (answers.test !== "none") {
+    markDown += `
+      * [Tests](#tests)
+      Instruction to test application:
+      ${answers.usage}
+        `
+  };
+
+  `
     * [Questions](#questions)
+  Any questions, please contact ${ answers.email }.You can find more of my work at ${ answers.github }.
     
-    ## Installation
-    
-    To install necessary dependencies, run the following command:
-    
-    \`\`\`
-    npm i
-    \`\`\`
-    
-    ## Usage
-    
-    Nothing free to use; have fun :)
-    
-    ## License
-    
-    This project is licensed under the APACHE 2.0 license.
-      
-    ## Contributing
-    
-    N/A
-    
-    ## Tests
-    
-    To run tests, run the following command:
-    
-    \`\`\`
-    npm test
-    \`\`\`
-    
-    ## Questions
-    
-    If you have any questions about the repo, open an issue or contact me directly at calvincarter@yahoo.com. You can find more of my work at [calvincarter](https://github.com/calvincarter/).
-    
-    
-  `;
+  ## License
+  This project is licensed under ${ answers.license }
+  `
+  return markDown;
+
 }
 
 module.exports = generateMarkdown;
