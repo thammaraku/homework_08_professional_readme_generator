@@ -103,7 +103,7 @@ function init() {
 
             // use util.promisify to start writing file asynchronously
             // writeToFile('project_readme.md', template);
-            writeAsync('project_readme.md', template);
+            writeAsync('project_readme_auto_generated.md', template);
 
 
 
