@@ -62,7 +62,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation_command',
-        message: "Please list commands to install your proejct here",
+        message: "Please list commands to install your project here",
     },
     {
         type: 'input',
