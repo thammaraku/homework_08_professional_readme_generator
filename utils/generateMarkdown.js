@@ -139,7 +139,7 @@ function generateMarkdown(answers) {
   Any questions on this project, please contact the developer through below channels.
   
   * Email: ${answers.email}
-  * GitHub Repository: ${answers.github}
+  * GitHub: [${answers.github}](https://github.com/${answers.github})
   `
   };
 
