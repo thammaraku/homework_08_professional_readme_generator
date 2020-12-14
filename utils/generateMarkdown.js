@@ -1,13 +1,56 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
   let markDown = `# ${answers.title}
-  ![Badge for License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
-
-  ## Description
-  ${answers.description}
-
-  ## Table of Contents
   `
+  if (answers.license === 'Apache License 2.0') {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+  `
+  }
+  else if (answers.license === 'GNU GPLv3') {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+  `
+  }
+  else if (answers.license === 'Mozilla Public License 2.0') {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
+  `
+  }
+  else if (answers.license === 'MIT License') {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/License-MIT-yellow.svg)
+  `
+  }
+  else if (answers.license === 'Boost Software License 1.0') {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)
+  `
+  }
+  else {
+    markDown +=
+  `
+  ![Badge for License](https://img.shields.io/badge/license-Unlicense-blue.svgg)
+  `
+  };
+  
+  if (answers.description !== '') {
+    markDown +=
+  `## Description
+  ${answers.description}
+  `
+  };
+
+
+    markDown +=
+  `## Table of Contents
+  `
+ 
 
   if (answers.installation !== '') {
     markDown +=
