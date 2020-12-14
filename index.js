@@ -12,28 +12,6 @@ var generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        name: 'github',
-        message: "What's your github username?",
-        validate: function (answer) {
-            if (answer.length < 1) {
-                return console.log("Your input is required otherwise default value will be used")
-            }
-            return true;
-        }
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: "What's your email address?",
-        validate: function (answer) {
-            if (answer.length < 1) {
-                return console.log("Your input is required otherwise default value will be used")
-            }
-            return true;
-        }
-    },
-    {
-        type: 'input',
         name: 'title',
         message: "What's your project title?",
         validate: function (answer) {
@@ -57,12 +35,12 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: "Could you provide instruction to install your project? If any commands are needed, please provide on the next question",
+        message: "Could you provide instruction to install your project in details? If there are any commands needed, please input on the next question.",
     },
     {
         type: 'input',
-        name: 'installation_command',
-        message: "Please list commands to install your project here",
+        name: 'installation_commands',
+        message: "Please list commands to install your project here.",
     },
     {
         type: 'input',
@@ -71,13 +49,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribute',
-        message: "Do you have any other contributors on this project?",
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: "If applicable, could you provide tests details of this project?",
+        name: 'credits',
+        message: "Do you have any collaborators work on this project?",
     },
     {
         type: 'list',
@@ -86,8 +59,26 @@ const questions = [
         default: 'none',
         choices: ['Apache License 2.0','GNU GPLv3','Mozilla Public License 2.0', 'MIT License','Boost Software License 1.0 ', 'The Unlicense'],
     },
-
-
+    {
+        type: 'input',
+        name: 'contribute',
+        message: "If you would like would like other developers to contribute on this project, please add guidelines here.",
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: "If applicable, could you provide tests details of this project?",
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: "What's your github username?",
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "What's your email address?",
+    },
 ];
 
 // function to write README file

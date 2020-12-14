@@ -1,8 +1,11 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
+
+  // TITLE
   let markDown = `# ${answers.title}
   `
-  if (answers.license === 'Apache License 2.0') {
+  // LICENSE LIST
+    if (answers.license === 'Apache License 2.0') {
     markDown +=
   `
   ![Badge for License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
@@ -39,6 +42,7 @@ function generateMarkdown(answers) {
   `
   };
   
+  // PROJECT DESCRIPTION
   if (answers.description !== '') {
     markDown +=
   `## Description
@@ -47,6 +51,7 @@ function generateMarkdown(answers) {
   };
 
 
+  // TABLE OF CONTENTS
     markDown +=
   `## Table of Contents
   `
@@ -64,9 +69,9 @@ function generateMarkdown(answers) {
   `
   };
 
-  if (answers.usage !== '') {
+  if (answers.credits !== '') {
     markDown +=
-  `* [Contributing](#contributing)
+  `* [Credits](#credits)
   `
   };
 
@@ -76,18 +81,18 @@ function generateMarkdown(answers) {
   `
   }
 
-  // TEST SECTION
-
+  // INSTALLATION
   if (answers.installation !== '') {
     markDown +=
   `## Installation
-  To install necessary dependencies, run the following command:
-  \`\`\`
   ${answers.installation}
+  \`\`\`
+  ${answers.installation_commands}
   \`\`\`
   `
   };
 
+  // USAGE
   if (answers.usage !== '') {
     markDown +=
   `## Usage
@@ -95,10 +100,23 @@ function generateMarkdown(answers) {
   `
   };
 
-  `## License
-  This project is licensed under ${answers.license}
+  // CREDITS
+  if (answers.credits !== '') {
+    markDown +=
+  `## Credits
+  ${answers.credits}
   `
+  };
+  
+  // LICENSE
+  if (answers.license !== '') {
+    markDown +=
+  `## License
+  This project is licensed under ${answers.license}.
+  `
+  };
 
+  // CONTRIBUTING
   if (answers.contribute !== '') {
     markDown +=
   `## Contributing
@@ -106,19 +124,24 @@ function generateMarkdown(answers) {
   `
   };
 
+  // TESTS
   if (answers.test !== '') {
     markDown +=
   `## Tests
-  Instruction to test application:
-  ${answers.usage}
+  ${answers.test}
   `
   };
 
+  // QUESTIONS
+  if (answers.email !== '' || answers.github !== '') {
     markDown +=
-
   `## Questions
-  Any questions, please contact ${answers.email}.You can find more of my work at ${answers.github}.
+  Any questions on this project, please contact the developer through below channels.
+  
+  * Email: ${answers.email}
+  * GitHub Repository: ${answers.github}
   `
+  };
 
   return markDown;
 }
