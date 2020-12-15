@@ -16,6 +16,11 @@ A high-quality, professional README.md is generated with the title of my project
 https://github.com/thammaraku/homework_08_professional_readme_generator
 
 ### Tutorial Video Link
+https://drive.google.com/file/d/1g0VkKf3TioidlkZ4Ba2Wd0x9mpEvvWK6/view?usp=sharing
+
+### Link to the sample of auto-generated README file
+https://github.com/thammaraku/homework_08_professional_readme_generator/blob/master/project_readme_auto_generated.md
+
 
 
 ## Knowledge learned from this assignment
