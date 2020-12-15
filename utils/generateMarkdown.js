@@ -125,10 +125,10 @@ function generateMarkdown(answers) {
   };
 
   // TESTS
-  if (answers.test !== '') {
+  if (answers.tests !== '') {
     markDown +=
   `## Tests
-  ${answers.test}
+  ${answers.tests}
   `
   };
 
