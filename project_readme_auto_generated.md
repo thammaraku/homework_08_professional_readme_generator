@@ -23,14 +23,14 @@
   This project is licensed under MIT License.
 
   ## Contributing
-  will add this in the future.
+  will add in the future.
 
   ## Tests
-  will add this in the future.
+  will add in the future.
 
   ## Questions
   Any questions on this project, please contact the developer through below channels.
   
-  * Email: 
+  * Email: thammaraku@gmail.com
   * GitHub: [thammaraku](https://github.com/thammaraku)
   
