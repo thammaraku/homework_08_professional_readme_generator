@@ -97,6 +97,7 @@ function generateMarkdown(answers) {
     markDown +=
   `## Usage
   ${answers.usage}
+  
   `
   };
 
@@ -105,6 +106,7 @@ function generateMarkdown(answers) {
     markDown +=
   `## Credits
   ${answers.credits}
+
   `
   };
   
@@ -113,6 +115,7 @@ function generateMarkdown(answers) {
     markDown +=
   `## License
   This project is licensed under ${answers.license}.
+
   `
   };
 
@@ -121,6 +124,7 @@ function generateMarkdown(answers) {
     markDown +=
   `## Contributing
   ${answers.contribute}
+
   `
   };
 
@@ -129,6 +133,7 @@ function generateMarkdown(answers) {
     markDown +=
   `## Tests
   ${answers.tests}
+
   `
   };
 

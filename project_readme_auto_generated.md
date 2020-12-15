@@ -9,24 +9,28 @@
   * [Credits](#credits)
   * [Tests](#tests)
   ## Installation
-  First the user will need to run npm install to install all the dependencies.
+  User will need to run npm install to install all the dependencies. 
   ```
   npm install
   ```
   ## Usage
   To start the application, execute node index.js command. Prompts will show up for the user to input project details. Once the last command is answered, the readme file will be generatated under the same folder as index.js.
+  
   ## Credits
   The README file is created by following good README structure on this link [the VSCode repository](https://github.com/microsoft/vscode). 
+
   ## License
   This project is licensed under MIT License.
+
   ## Contributing
-  none
+  will add this in the future.
+
   ## Tests
-  Instruction to test application:
-  To start the application, execute node index.js command. Prompts will show up for the user to input project details. Once the last command is answered, the readme file will be generatated under the same folder as index.js.
+  will add this in the future.
+
   ## Questions
   Any questions on this project, please contact the developer through below channels.
   
-  * Email: thammaraku@gmail.com
-  * GitHub Repository: thammaraku
+  * Email: 
+  * GitHub: [thammaraku](https://github.com/thammaraku)
   
